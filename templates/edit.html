@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактировать заметку</title>
+</head>
+<body>
+    <h1>Редактирование заметки</h1>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.title.label }} {{ form.title(size=40) }}<br>
+        {{ form.content.label }} {{ form.content(rows=4, cols=40) }}<br>
+        {{ form.submit() }}
+    </form>
+    <a href="{{ url_for('index') }}">Назад к списку</a>
+</body>
+</html>
